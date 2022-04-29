@@ -70,10 +70,4 @@ class Laporan extends CI_Controller
 		$this->load->view('pinjam/laporan-pinjam', $data);
 		$this->load->view('templates/footer');
 	}
-
-
-
-
-
-	
 }
