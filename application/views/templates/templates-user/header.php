@@ -7,7 +7,7 @@
  <title>Pustaka-Booking | <?= $judul; ?></title>
  <link rel="icon" type="image/png" href="<?= base_url('assets/img/logo/'); ?>logo-pb.png">
  <link rel="stylesheet" href="<?= base_url('assets/'); ?>user/css/bootstrap.css">
- <link href="<?= base_url('assets/'); ?>vendor/fontawesomefree/css/all.min.css" rel="stylesheet" type="text/css">
+ <link href="<?= base_url('assets/'); ?>vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
  <link href="<?= base_url('assets/'); ?>datatable/datatables.css" rel="stylesheet" type="text/css">
 </head>
 <body>
@@ -22,17 +22,17 @@
          <a class="nav-item nav-link active" href="<?= base_url(); ?>">Beranda <span class="sr-only">(current)</span></a>
          <?php
          if (!empty($this->session->userdata('email'))) { ?>
-         <a class="nav-item nav-link" href="<?= base_url('booking'); ?>">Booking <b><?= 
-         $this->ModelBooking->getDataWhere('temp', ['email_user' => $this->session->userdata('email')])->num_rows();
-          ?></b> Buku</a>
+           <a class="nav-item nav-link" href="<?= base_url('booking'); ?>">Booking <b><?= 
+           $this->ModelBooking->getDataWhere('temp', ['email_user' => $this->session->userdata('email')])->num_rows();
+           ?></b> Buku</a>
 
 
 
-         <a class="nav-item nav-link" href="<?= base_url('member/myprofil'); ?>">Profil Saya</a>
-         <a class="nav-item nav-link" href="<?= base_url('member/logout'); ?>"><i class="fas fw fa-login"></i> Log out</a>
+           <a class="nav-item nav-link" href="<?= base_url('member/myprofil'); ?>">Profil Saya</a>
+           <a class="nav-item nav-link" href="<?= base_url('member/logout'); ?>"><i class="fas fw fa-login"></i> Log out</a>
          <?php } else { ?>
-         <a class="nav-item nav-link" data-toggle="modal" data-target="#daftarModal" href="<?= base_url('member/daftar'); ?>"><i class="fas fw fa-login"></i> Daftar</a>
-         <a class="nav-item nav-link" data-toggle="modal" data-target="#loginModal" href="<?= base_url('member/_login'); ?>"><i class="fas fw fa-login"></i> Log in</a>
+           <a class="nav-item nav-link" data-toggle="modal" data-target="#daftarModal" href="<?= base_url('member/daftar'); ?>"><i class="fas fw fa-login"></i> Daftar</a>
+           <a class="nav-item nav-link" data-toggle="modal" data-target="#loginModal" href="<?= base_url('member/_login'); ?>"><i class="fas fw fa-login"></i> Log in</a>
          <?php } ?>
          <span class="nav-item nav-link navright" style="display:block; marginleft:20px;">Selamat Datang <b><?= $user; ?></b></span>
        </div>
